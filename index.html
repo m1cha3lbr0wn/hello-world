@@ -1,18 +1,83 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <div class="container">
+        <!-- Header -->
+        <header class="my-4">
+            <h1>Your Health Dashboard</h1>
+            <p><strong>Date:</strong> April 16, 2025 | <strong>Age:</strong> 35 | <strong>Sex:</strong> Male</p>
+            <div class="health-score">Health Score: <strong>92/100</strong></div>
+        </header>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+        <!-- Summary -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3>Key Insights</h3>
+                <ul>
+                    <li>LDL Cholesterol slightly elevated (110 mg/dL). Consider dietary changes.</li>
+                    <li>ApoB at upper limit (90 mg/dL). Monitor cardiovascular risk.</li>
+                    <li>All other markers optimal, supporting active lifestyle.</li>
+                </ul>
+                <h3>Recommendations</h3>
+                <p>Diet: Add oats, nuts, fatty fish. Exercise: Maintain regimen, add HIIT. Follow-Up: Retest LDL/ApoB in 3–6 months.</p>
+            </div>
+        </div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+        <!-- Test Results Table -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3>Test Results</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Test Name</th>
+                            <th>Value</th>
+                            <th>Healthy Range</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="test-results">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
+        <!-- Visualizations -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Key Biomarkers</h3>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Result Breakdown</h3>
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
